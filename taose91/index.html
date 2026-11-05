@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>桃色91蘑菇-桃色91蘑菇主题页_蘑菇主题图集与视觉灵感</title>
+<meta name="description" content="桃色91蘑菇主题首页，围绕桃色91蘑菇的视觉风格、图集灵感与内容浏览路径展开，提供主题介绍、内容分区与清晰入口，帮助访问者快速了解桃色91蘑菇主题内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4a6b8'/%3E%3Cpath d='M12 34c0-11 9-20 20-20s20 9 20 20z' fill='%23fff3f6'/%3E%3Crect x='26' y='34' width='12' height='18' rx='5' fill='%23fff3f6'/%3E%3Ccircle cx='24' cy='26' r='3' fill='%23f4a6b8'/%3E%3Ccircle cx='40' cy='24' r='2.5' fill='%23f4a6b8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pink:#f4a6b8;
+  --pink-deep:#d9758d;
+  --pink-soft:#fdeef2;
+  --cream:#fffaf7;
+  --ink:#3d2b31;
+  --ink-soft:#6f5a61;
+  --line:#f1d9df;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(217,117,141,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,247,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;letter-spacing:.5px;color:var(--pink-deep)}
+.logo svg{width:34px;height:34px;flex:none}
+nav.main ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+nav.main a{
+  display:inline-block;padding:7px 13px;border-radius:999px;font-size:.9rem;color:var(--ink-soft);
+  transition:.2s;
+}
+nav.main a:hover,nav.main a:focus-visible{background:var(--pink-soft);color:var(--pink-deep)}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(circle at 12% 20%,rgba(244,166,184,.35),transparent 45%),
+    radial-gradient(circle at 88% 8%,rgba(253,222,230,.9),transparent 50%),
+    linear-gradient(180deg,#fff5f8 0%,var(--cream) 100%);
+  padding:64px 0 56px;
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);color:var(--pink-deep);
+  font-size:.78rem;font-weight:700;letter-spacing:1px;
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink-deep)}
+h1{
+  font-size:clamp(1.9rem,4.4vw,3rem);
+  line-height:1.25;font-weight:900;letter-spacing:1px;
+  color:var(--ink);
+}
+h1 .hl{color:var(--pink-deep)}
+.hero p.lead{margin-top:18px;font-size:1.02rem;color:var(--ink-soft);max-width:34em}
+.hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-size:.95rem;font-weight:700;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--pink-deep);color:#fff;box-shadow:0 8px 20px rgba(217,117,141,.3)}
+.btn-primary:hover{background:#c9647c;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--pink-deep);border-color:var(--line)}
+.btn-ghost:hover{background:var(--pink-soft)}
+.hero-art{position:relative}
+.hero-art .card-art{
+  background:#fff;border:1px solid var(--line);border-radius:26px;
+  padding:22px;box-shadow:var(--shadow);
+}
+.hero-art svg{width:100%;height:auto}
+.hero-stats{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
+.stat{
+  flex:1;min-width:110px;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:12px 14px;text-align:center;
+}
+.stat b{display:block;font-size:1.15rem;color:var(--pink-deep)}
+.stat span{font-size:.78rem;color:var(--ink-soft)}
+
+/* 区块通用 */
+section{padding:64px 0}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-tag{font-size:.78rem;font-weight:700;letter-spacing:2px;color:var(--pink-deep);text-transform:uppercase}
+h2{font-size:clamp(1.35rem,2.6vw,1.75rem);margin-top:8px;font-weight:800;line-height:1.4}
+.sec-head p{margin-top:12px;color:var(--ink-soft);font-size:.95rem}
+
+/* 内容卡片 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.25s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#f0c8d3}
+.card .icon{
+  width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  background:var(--pink-soft);margin-bottom:16px;
+}
+.card h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.card p{font-size:.9rem;color:var(--ink-soft)}
+.card .meta{margin-top:14px;font-size:.78rem;color:var(--pink-deep);font-weight:700}
+
+/* 特色区 */
+.feature{
+  background:var(--pink-soft);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.feature .grid-2{align-items:center;gap:44px}
+.feature h2{margin-top:8px}
+.feature p{margin-top:14px;color:var(--ink-soft);font-size:.95rem}
+.feature ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.feature li{display:flex;gap:10px;font-size:.92rem;color:var(--ink)}
+.feature li::before{
+  content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;
+  background:var(--pink-deep);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat;
+}
+.feature .art-box{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow);
+}
+
+/* 浏览筛选 */
+.toolbar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 14px;margin-bottom:26px;
+}
+.toolbar input{
+  flex:1;min-width:180px;border:none;outline:none;font-size:.92rem;background:transparent;
+  padding:6px 8px;color:var(--ink);font-family:inherit;
+}
+.toolbar input::placeholder{color:#b9a3aa}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+  padding:7px 15px;border-radius:999px;font-size:.85rem;cursor:pointer;font-family:inherit;transition:.2s;
+}
+.chip:hover{border-color:var(--pink);color:var(--pink-deep)}
+.chip.active{background:var(--pink-deep);border-color:var(--pink-deep);color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;
+}
+.gcard:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.gcard .thumb{aspect-ratio:16/10;background:var(--pink-soft);display:grid;place-items:center}
+.gcard .body{padding:18px 20px 22px}
+.gcard h3{font-size:.98rem;font-weight:800}
+.gcard p{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+.gcard .tagrow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.tag{font-size:.72rem;background:var(--pink-soft);color:var(--pink-deep);padding:3px 10px;border-radius:999px;font-weight:700}
+.empty{
+  display:none;text-align:center;color:var(--ink-soft);font-size:.92rem;
+  padding:40px;background:#fff;border:1px dashed var(--line);border-radius:var(--radius);
+}
+
+/* 问答 */
+.faq{display:grid;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;
+}
+details[open]{border-color:#f0c8d3}
+summary{
+  cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--pink-deep);font-weight:700;font-size:1.1rem}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;font-size:.9rem;color:var(--ink-soft)}
+
+/* 下载区 */
+.download{
+  background:linear-gradient(135deg,#fff0f4,#fde3ea);
+  border:1px solid var(--line);border-radius:26px;padding:40px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;
+}
+.download h2{margin-top:6px}
+.download p{margin-top:12px;color:var(--ink-soft);font-size:.93rem}
+.download .btn[aria-disabled="true"]{
+  background:#fff;color:#b9a3aa;border-color:var(--line);
+  box-shadow:none;pointer-events:none;cursor:default;
+}
+.download-note{font-size:.78rem;color:var(--ink-soft);margin-top:12px}
+
+/* 页尾 */
+footer.site{
+  border-top:1px solid var(--line);background:#fff;
+  padding:40px 0 30px;margin-top:20px;
+}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot-brand{max-width:320px}
+.foot-brand .logo{margin-bottom:12px}
+.foot-brand p{font-size:.85rem;color:var(--ink-soft)}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap}
+.foot-cols h4{font-size:.85rem;font-weight:800;margin-bottom:10px}
+.foot-cols ul{list-style:none;display:grid;gap:6px}
+.foot-cols a{font-size:.84rem;color:var(--ink-soft);transition:.2s}
+.foot-cols a:hover{color:var(--pink-deep)}
+.copy{
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:.78rem;color:#a48d94;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+  .hero-grid,.feature .grid-2,.download{grid-template-columns:1fr}
+  .grid-3,.grid-2,.gallery{grid-template-columns:1fr 1fr}
+  .hero{padding:44px 0 40px}
+  section{padding:48px 0}
+}
+@media(max-width:620px){
+  .grid-3,.grid-2,.gallery{grid-template-columns:1fr}
+  .nav-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  nav.main ul{gap:4px}
+  nav.main a{padding:6px 10px;font-size:.84rem}
+  .download{padding:26px}
+  .foot-cols{gap:32px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top" aria-label="桃色91蘑菇 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#f4a6b8"/>
+        <path d="M12 34c0-11 9-20 20-20s20 9 20 20z" fill="#fff3f6"/>
+        <rect x="26" y="34" width="12" height="18" rx="5" fill="#fff3f6"/>
+        <circle cx="24" cy="26" r="3" fill="#f4a6b8"/>
+        <circle cx="40" cy="24" r="2.5" fill="#f4a6b8"/>
+      </svg>
+      桃色91蘑菇
+    </a>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#about">主题概览</a></li>
+        <li><a href="#gallery">图集浏览</a></li>
+        <li><a href="#style">视觉风格</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#download">主题下载</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 图集与视觉灵感</span>
+        <h1>桃色91蘑菇</h1>
+        <p class="lead">桃色91蘑菇是一个以桃粉色与蘑菇造型为核心的视觉主题页。这里把主题的配色逻辑、图集分区和浏览路径整理在一起，方便你按兴趣找到想看的桃色91蘑菇内容，而不是在零散页面之间来回跳转。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#gallery">
+            进入图集浏览
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#about">了解主题构成</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>3</b><span>主题分区</span></div>
+          <div class="stat"><b>6</b><span>图集条目</span></div>
+          <div class="stat"><b>1</b><span>统一配色</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="card-art">
+          <svg viewBox="0 0 320 260" role="img" aria-label="桃色91蘑菇主题插画">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fdeef2"/>
+                <stop offset="1" stop-color="#fffaf7"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f4a6b8"/>
+                <stop offset="1" stop-color="#d9758d"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="260" rx="18" fill="url(#g1)"/>
+            <circle cx="70" cy="60" r="26" fill="#fde3ea"/>
+            <circle cx="256" cy="46" r="16" fill="#fbd5df"/>
+            <path d="M96 148c0-30 26-54 58-54s58 24 58 54z" fill="url(#g2)"/>
+            <rect x="136" y="148" width="36" height="62" rx="16" fill="#fff"/>
+            <rect x="136" y="148" width="36" height="62" rx="16" fill="#fdeef2" opacity=".7"/>
+            <circle cx="132" cy="120" r="8" fill="#fff" opacity=".85"/>
+            <circle cx="170" cy="112" r="6" fill="#fff" opacity=".85"/>
+            <circle cx="196" cy="128" r="5" fill="#fff" opacity=".85"/>
+            <ellipse cx="154" cy="226" rx="62" ry="9" fill="#f4a6b8" opacity=".22"/>
+            <path d="M42 196c14 0 14 18 28 18s14-18 28-18" stroke="#f4a6b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M222 196c14 0 14 18 28 18s14-18 28-18" stroke="#f4a6b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主题概览 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Theme Overview</div>
+        <h2>桃色91蘑菇的三层内容结构</h2>
+        <p>主题页不追求罗列，而是把桃色91蘑菇拆成可理解的三块：配色基调、造型元素与图集浏览。每一块都回答一个具体问题，让第一次访问的人也能快速判断这里是否值得停留。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d9758d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="#f4a6b8" stroke="none"/></svg>
+          </div>
+          <h3>桃粉主色</h3>
+          <p>页面以桃粉为基调，浅粉作大面积背景，深粉承担强调与按钮。两种明度拉开层次，长时间阅读也不刺眼。</p>
+          <div class="meta">配色 · 主色与辅色</div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d9758d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13c0-4.4 3.6-8 8-8s8 3.6 8 8z"/><rect x="9" y="13" width="6" height="7" rx="3"/></svg>
+          </div>
+          <h3>蘑菇造型</h3>
+          <p>蘑菇是主题的核心图形，出现在 Logo、插画与卡片缩略图中。圆润伞盖与短柄的组合，让视觉语言保持统一。</p>
+          <div class="meta">图形 · 主题元素</div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d9758d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M3 9h18"/></svg>
+          </div>
+          <h3>图集浏览</h3>
+          <p>图集按主题标签分组，支持搜索与标签筛选。浏览时可以先看缩略图与简介，再决定是否进入具体条目。</p>
+          <div class="meta">浏览 · 筛选与检索</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图集浏览 -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Gallery</div>
+        <h2>桃色91蘑菇图集浏览</h2>
+        <p>下面六个条目分别对应不同的主题角度：配色、造型、排版与插画。输入关键词或点击标签即可筛选，结果会即时显示。</p>
+      </div>
+
+      <div class="toolbar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b9a3aa" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="搜索图集条目，例如：配色、插画、卡片" aria-label="搜索图集条目">
+      </div>
+
+      <div class="chips" style="margin-bottom:24px" role="group" aria-label="图集标签筛选">
+        <button class="chip active" data-tag="all">全部</button>
+        <button class="chip" data-tag="配色">配色</button>
+        <button class="chip" data-tag="插画">插画</button>
+        <button class="chip" data-tag="排版">排版</button>
+        <button class="chip" data-tag="图形">图形</button>
+      </div>
+
+      <div class="gallery" id="gallery-list">
+        <article class="gcard" data-tags="配色 图形" data-text="桃粉渐变的层次搭配 配色 图形">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><circle cx="43" cy="43" r="30" fill="#f4a6b8"/><circle cx="43" cy="43" r="18" fill="#fdeef2"/><circle cx="43" cy="43" r="8" fill="#d9758d"/></svg>
+          </div>
+          <div class="body">
+            <h3>桃粉渐变的层次搭配</h3>
+            <p>用三种明度的桃粉构建从背景到强调的过渡，避免单一色块带来的沉闷。</p>
+            <div class="tagrow"><span class="tag">配色</span><span class="tag">图形</span></div>
+          </div>
+        </article>
+
+        <article class="gcard" data-tags="插画 图形" data-text="蘑菇插画的构图方式 插画 图形">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><path d="M20 48c0-13 11-23 23-23s23 10 23 23z" fill="#d9758d"/><rect x="36" y="48" width="14" height="24" rx="7" fill="#fff"/></svg>
+          </div>
+          <div class="body">
+            <h3>蘑菇插画的构图方式</h3>
+            <p>伞盖居中、短柄落地，留出两侧空白放置装饰圆点，让主体在方形画布中保持稳定。</p>
+            <div class="tagrow"><span class="tag">插画</span><span class="tag">图形</span></div>
+          </div>
+        </article>
+
+        <article class="gcard" data-tags="排版" data-text="首屏标题的留白节奏 排版">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><rect x="16" y="26" width="54" height="8" rx="4" fill="#d9758d"/><rect x="16" y="42" width="40" height="6" rx="3" fill="#f4a6b8"/><rect x="16" y="54" width="48" height="6" rx="3" fill="#fbd5df"/></svg>
+          </div>
+          <div class="body">
+            <h3>首屏标题的留白节奏</h3>
+            <p>标题、导语和按钮之间保持递增的垂直间距，让阅读视线自然下移。</p>
+            <div class="tagrow"><span class="tag">排版</span></div>
+          </div>
+        </article>
+
+        <article class="gcard" data-tags="插画 配色" data-text="卡片缩略图的统一风格 插画 配色">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><rect x="14" y="18" width="58" height="50" rx="10" fill="#fdeef2"/><circle cx="32" cy="36" r="7" fill="#f4a6b8"/><rect x="24" y="50" width="38" height="6" rx="3" fill="#d9758d"/></svg>
+          </div>
+          <div class="body">
+            <h3>卡片缩略图的统一风格</h3>
+            <p>缩略图只用主题色与几何形状，不引入照片，保证列表滚动时的视觉一致性。</p>
+            <div class="tagrow"><span class="tag">插画</span><span class="tag">配色</span></div>
+          </div>
+        </article>
+
+        <article class="gcard" data-tags="图形 排版" data-text="图标与标签的尺寸规范 图形 排版">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><rect x="18" y="20" width="20" height="20" rx="6" fill="#f4a6b8"/><rect x="48" y="20" width="20" height="20" rx="6" fill="#fdeef2"/><rect x="18" y="48" width="20" height="20" rx="6" fill="#fdeef2"/><rect x="48" y="48" width="20" height="20" rx="6" fill="#d9758d"/></svg>
+          </div>
+          <div class="body">
+            <h3>图标与标签的尺寸规范</h3>
+            <p>图标固定在 18–22 像素区间，标签字号略小于正文，避免与主内容争夺注意力。</p>
+            <div class="tagrow"><span class="tag">图形</span><span class="tag">排版</span></div>
+          </div>
+        </article>
+
+        <article class="gcard" data-tags="配色 排版" data-text="浅色背景上的文字对比 配色 排版">
+          <div class="thumb">
+            <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true"><rect x="14" y="24" width="58" height="10" rx="5" fill="#3d2b31"/><rect x="14" y="42" width="46" height="8" rx="4" fill="#6f5a61"/><rect x="14" y="56" width="34" height="8" rx="4" fill="#b9a3aa"/></svg>
+          </div>
+          <div class="body">
+            <h3>浅色背景上的文字对比</h3>
+            <p>正文使用偏暖的深灰，标题使用更深一级的墨色，在桃粉背景上保持足够对比。</p>
+            <div class="tagrow"><span class="tag">配色</span><span class="tag">排版</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="empty" id="empty">没有匹配的条目，试试其他关键词或切换标签。</div>
+    </div>
+  </section>
+
+  <!-- 视觉风格 -->
+  <section id="style" class="feature">
+    <div class="wrap grid-2">
+      <div>
+        <div class="sec-tag">Visual Style</div>
+        <h2>桃色91蘑菇的视觉规则</h2>
+        <p>主题的识别度来自克制：只用两种主色、一种造型和一套间距。桃色91蘑菇在页面各处重复这些规则，让浏览者不需要额外解释就能认出这是同一个主题。</p>
+        <ul>
+          <li>主色固定为桃粉，深粉只用于按钮、标签和强调文字。</li>
+          <li>圆角统一在 14–26 像素区间，卡片与按钮保持同一手感。</li>
+          <li>插画全部由内嵌 SVG 绘制，不依赖外部图片资源。</li>
+          <li>正文行长控制在 34 个汉字以内，移动端自动收窄。</li>
+        </ul>
+      </div>
+      <div class="art-box">
+        <svg viewBox="0 0 360 280" role="img" aria-label="桃色91蘑菇视觉规则示意">
+          <rect width="360" height="280" rx="18" fill="#fffaf7"/>
+          <rect x="24" y="24" width="150" height="104" rx="14" fill="#fdeef2"/>
+          <circle cx="99" cy="64" r="18" fill="#f4a6b8"/>
+          <rect x="60" y="92" width="78" height="8" rx="4" fill="#d9758d"/>
+          <rect x="186" y="24" width="150" height="104" rx="14" fill="#fdeef2"/>
+          <path d="M216 88c0-16 14-28 30-28s30 12 30 28z" fill="#d9758d"/>
+          <rect x="238" y="88" width="16" height="24" rx="8" fill="#fff"/>
+          <rect x="24" y="152" width="150" height="104" rx="14" fill="#fdeef2"/>
+          <rect x="48" y="178" width="102" height="10" rx="5" fill="#3d2b31"/>
+          <rect x="48" y="198" width="78" height="8" rx="4" fill="#6f5a61"/>
+          <rect x="48" y="216" width="88" height="8" rx="4" fill="#b9a3aa"/>
+          <rect x="186" y="152" width="150" height="104" rx="14" fill="#fdeef2"/>
+          <circle cx="228" cy="196" r="14" fill="#f4a6b8"/>
+          <circle cx="264" cy="196" r="14" fill="#fbd5df"/>
+          <circle cx="300" cy="196" r="14" fill="#d9758d"/>
+          <rect x="210" y="224" width="102" height="8" rx="4" fill="#d9758d"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 问答 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>关于桃色91蘑菇的常见问题</h2>
+        <p>以下回答只针对本页呈现的内容与功能，不涉及页面之外的任何服务。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>桃色91蘑菇这个页面主要提供什么？</summary>
+          <p>本页是桃色91蘑菇的主题首页，集中呈现主题配色、蘑菇造型与图集浏览三部分内容，并提供搜索、标签筛选和下载入口。</p>
+        </details>
+        <details>
+          <summary>图集支持哪些筛选方式？</summary>
+          <p>可以在搜索框输入关键词，也可以点击配色、插画、排版、图形四个标签。两种方式可以叠加使用，结果会即时更新。</p>
+        </details>
+        <details>
+          <summary>页面里的插画需要额外加载图片吗？</summary>
+          <p>不需要。桃色91蘑菇的插画、图标和 Logo 均以内嵌 SVG 绘制，页面独立运行，不依赖外部图片资源。</p>
+        </details>
+        <details>
+          <summary>下载按钮现在可以使用吗？</summary>
+          <p>当前下载入口为占位状态，按钮显示为禁用样式，尚未绑定实际地址。后续接入真实文件后即可正常使用。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <div class="wrap download">
+      <div>
+        <div class="sec-tag">Download</div>
+        <h2>获取桃色91蘑菇主题资源</h2>
+        <p>主题资源包含配色说明、图形素材与页面结构参考，适合用于个人设计练习与主题延伸。下载入口将在资源整理完成后开放。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+          <a class="btn btn-ghost" href="#gallery">先看图集</a>
+        </div>
+        <p class="download-note">当前为占位入口，暂不可点击，请留意后续更新。</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 300 200" role="img" aria-label="桃色91蘑菇资源下载示意">
+          <rect width="300" height="200" rx="18" fill="#fff"/>
+          <rect x="40" y="34" width="220" height="26" rx="13" fill="#fdeef2"/>
+          <rect x="40" y="72" width="180" height="14" rx="7" fill="#f4a6b8"/>
+          <rect x="40" y="96" width="150" height="10" rx="5" fill="#fbd5df"/>
+          <rect x="40" y="116" width="200" height="10" rx="5" fill="#fdeef2"/>
+          <circle cx="240" cy="150" r="26" fill="#fdeef2"/>
+          <path d="M240 138v20m0 0-8-8m8 8 8-8" stroke="#d9758d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="40" y="150" width="120" height="12" rx="6" fill="#f4a6b8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f4a6b8"/>
+            <path d="M12 34c0-11 9-20 20-20s20 9 20 20z" fill="#fff3f6"/>
+            <rect x="26" y="34" width="12" height="18" rx="5" fill="#fff3f6"/>
+            <circle cx="24" cy="26" r="3" fill="#f4a6b8"/>
+            <circle cx="40" cy="24" r="2.5" fill="#f4a6b8"/>
+          </svg>
+          桃色91蘑菇
+        </div>
+        <p>桃色91蘑菇主题首页，围绕桃粉配色与蘑菇造型整理图集、视觉规则与浏览路径，内容以本页实际呈现为准。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>页面导航</h4>
+          <ul>
+            <li><a href="#about">主题概览</a></li>
+            <li><a href="#gallery">图集浏览</a></li>
+            <li><a href="#style">视觉风格</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>主题内容</h4>
+          <ul>
+            <li><a href="#gallery">配色与图形</a></li>
+            <li><a href="#gallery">插画构图</a></li>
+            <li><a href="#style">排版规范</a></li>
+            <li><a href="#download">资源下载</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 桃色91蘑菇 · 主题首页</span>
+      <span>内容与视觉均为页面内展示说明</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('search');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#gallery-list .gcard'));
+  var empty = document.getElementById('empty');
+  var activeTag = 'all';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(card){
+      var tags = card.getAttribute('data-tags') || '';
+      var text = (card.getAttribute('data-text') || '').toLowerCase();
+      var tagOk = activeTag === 'all' || tags.indexOf(activeTag) !== -1;
+      var textOk = q === '' || text.indexOf(q) !== -1;
+      var ok = tagOk && textOk;
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.style.display = shown === 0 ? 'block' : 'none';
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      activeTag = chip.getAttribute('data-tag');
+      apply();
+    });
+  });
+
+  input.addEventListener('input', apply);
+})();
+</script>
+
+</body>
+                                                                                 </html>
