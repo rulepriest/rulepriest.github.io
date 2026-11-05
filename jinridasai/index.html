@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日大赛每日大赛吃瓜-每日大赛赛况速览_今日大赛吃瓜看点_吃瓜大赛实时更新</title>
+<meta name="description" content="今日大赛每日大赛吃瓜主题首页，汇总每日大赛的赛况速览、吃瓜看点、热门话题与围观指南，帮助你在今日大赛中快速找到每日大赛吃瓜的重点内容与更新脉络。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1f2e'/%3E%3Ccircle cx='32' cy='30' r='15' fill='%23ffb84d'/%3E%3Cpath d='M32 15a15 15 0 0 1 0 30z' fill='%23ff7a45'/%3E%3Cpath d='M24 20l4 6M40 20l-4 6' stroke='%231a1f2e' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 50h24' stroke='%23ffb84d' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#12151f;--panel:#1b2030;--panel2:#232a3d;--line:#333c54;
+--text:#eef1f8;--muted:#a2abc2;--accent:#ffb84d;--accent2:#ff7a45;--cool:#6fb3ff;
+}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+background:var(--bg);color:var(--text);line-height:1.75;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* header */
+header{border-bottom:1px solid var(--line);background:rgba(18,21,31,.92);position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.5px;flex-shrink:0}
+.logo svg{width:34px;height:34px;flex-shrink:0}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14.5px;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.menu-btn{display:none;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 12px;font-size:14px;cursor:pointer}
+/* hero */
+.hero{padding:56px 0 44px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{
+content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;
+background:radial-gradient(circle,rgba(255,184,77,.16),transparent 70%);pointer-events:none;
+}
+.tagline{display:inline-block;font-size:12.5px;letter-spacing:2px;color:var(--accent);border:1px solid rgba(255,184,77,.4);border-radius:99px;padding:4px 14px;margin-bottom:20px}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.3;font-weight:800;letter-spacing:1px;margin-bottom:18px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{max-width:640px;color:var(--muted);font-size:16px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:10px;font-size:15px;font-weight:600;transition:.2s}
+.btn-main{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#241a08}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:var(--panel)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed}
+.hero-stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:38px}
+.stat b{display:block;font-size:24px;color:var(--accent);line-height:1.2}
+.stat span{font-size:13px;color:var(--muted)}
+/* section */
+section{padding:52px 0}
+.sec-head{margin-bottom:28px}
+.sec-head .kicker{font-size:12.5px;letter-spacing:2px;color:var(--cool);text-transform:uppercase}
+.sec-head h2{font-size:24px;font-weight:700;margin-top:6px}
+.sec-head p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:700px}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;transition:.2s}
+.card:hover{border-color:rgba(255,184,77,.45);transform:translateY(-3px)}
+.card h3{font-size:17.5px;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.card h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.card p{font-size:14.5px;color:var(--muted)}
+.card .meta{margin-top:14px;font-size:12.5px;color:#7d879e;display:flex;gap:12px;flex-wrap:wrap}
+/* list */
+.list{list-style:none;display:flex;flex-direction:column;gap:0}
+.list li{display:flex;gap:16px;padding:20px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.list li:last-child{border-bottom:none}
+.num{font-size:20px;font-weight:800;color:rgba(255,184,77,.5);min-width:34px;line-height:1.4}
+.list h3{font-size:16px;margin-bottom:6px}
+.list p{font-size:14px;color:var(--muted)}
+.list .badge{font-size:11.5px;padding:2px 9px;border-radius:99px;background:rgba(111,179,255,.14);color:var(--cool);margin-left:8px;vertical-align:middle;white-space:nowrap}
+/* guide */
+.guide{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:30px}
+.guide h2{font-size:22px;margin-bottom:14px}
+.guide p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+.guide p:last-child{margin-bottom:0}
+.guide strong{color:var(--text)}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.pill{font-size:13px;padding:6px 14px;border-radius:99px;background:var(--panel2);border:1px solid var(--line);color:var(--muted)}
+/* footer */
+footer{border-top:1px solid var(--line);padding:36px 0 44px;margin-top:20px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-bottom:24px}
+.foot-brand{max-width:420px}
+.foot-brand .logo{margin-bottom:12px}
+.foot-brand p{font-size:13.5px;color:var(--muted)}
+.foot-links{display:flex;gap:48px;flex-wrap:wrap}
+.foot-links h4{font-size:13px;color:var(--accent);margin-bottom:10px;letter-spacing:1px}
+.foot-links ul{list-style:none;font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:7px}
+.foot-links a:hover{color:var(--accent)}
+.copy{font-size:12.5px;color:#6b748a;border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:860px){
+.g3{grid-template-columns:1fr 1fr}
+nav ul{display:none}
+nav.open ul{display:flex;position:absolute;left:0;right:0;top:100%;background:var(--panel);flex-direction:column;padding:16px 20px;border-bottom:1px solid var(--line);gap:14px}
+.menu-btn{display:block}
+.bar{position:relative}
+.hero{padding:38px 0 32px}
+.hero-stats{gap:22px}
+}
+@media(max-width:600px){
+.g3,.g2{grid-template-columns:1fr}
+.foot-links{gap:32px}
+section{padding:40px 0}
+.card{padding:20px}
+.guide{padding:22px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<rect width="64" height="64" rx="14" fill="#1a1f2e"/>
+<circle cx="32" cy="30" r="15" fill="#ffb84d"/>
+<path d="M32 15a15 15 0 0 1 0 30z" fill="#ff7a45"/>
+<path d="M24 20l4 6M40 20l-4 6" stroke="#1a1f2e" stroke-width="3" stroke-linecap="round"/>
+<path d="M20 50h24" stroke="#ffb84d" stroke-width="4" stroke-linecap="round"/>
+</svg>
+<span>今日大赛每日大赛吃瓜</span>
+</a>
+<nav id="nav">
+<ul>
+<li><a href="#overview">赛况速览</a></li>
+<li><a href="#watch">吃瓜看点</a></li>
+<li><a href="#topics">热门话题</a></li>
+<li><a href="#guide">围观指南</a></li>
+<li><a href="#faq">常见疑问</a></li>
+</ul>
+</nav>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">目录</button>
+</div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+<div class="wrap">
+<span class="tagline">每日更新 · 围观有据</span>
+<h1>今日大赛每日大赛吃瓜</h1>
+<p class="lead">把今日大赛的赛程、赛况与讨论热度放在同一页看清楚。这里是每日大赛吃瓜的集中入口：先看今天比了什么，再看大家聊了什么，最后知道从哪里跟进。</p>
+<div class="cta">
+<a class="btn btn-main" href="#overview">查看今日赛况速览</a>
+<a class="btn btn-ghost" href="#watch">直接看吃瓜看点</a>
+<a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">下载</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><b>每日</b><span>赛程按日更新</span></div>
+<div class="stat"><b>4 个</b><span>主要围观栏目</span></div>
+<div class="stat"><b>1 页</b><span>汇总赛况与话题</span></div>
+</div>
+</div>
+</div>
+
+<section id="overview">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">Overview</span>
+<h2>今日大赛赛况速览</h2>
+<p>今日大赛每日大赛吃瓜的第一件事，是把当天比了什么、结果如何看清楚。速览区按比赛环节拆分，方便你快速定位自己关心的一段。</p>
+</div>
+<div class="grid g3">
+<div class="card">
+<h3><span class="dot"></span>开场与对阵</h3>
+<p>每日大赛的开场环节决定当天的对阵结构。速览会记录对阵形成的方式、参与方和开赛时间，让你在吃瓜前先掌握基本盘面。</p>
+<div class="meta"><span>环节：开场</span><span>关注：对阵结构</span></div>
+</div>
+<div class="card">
+<h3><span class="dot"></span>中段走势</h3>
+<p>中段是今日大赛最容易出现反转的部分。这里汇总走势变化与关键节点，帮助理解后续讨论为何集中在某几个片段上。</p>
+<div class="meta"><span>环节：中段</span><span>关注：走势变化</span></div>
+</div>
+<div class="card">
+<h3><span class="dot"></span>收尾与结果</h3>
+<p>收尾环节给出当日结论。每日大赛吃瓜的讨论往往在结果公布后升温，速览会标明结果确认的状态，避免把猜测当成定论。</p>
+<div class="meta"><span>环节：收尾</span><span>关注：结果确认</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="watch">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">Highlights</span>
+<h2>每日大赛吃瓜看点</h2>
+<p>看点区回答“今天有什么值得聊”。以下四条按围观价值排序，每条都对应今日大赛中的具体环节，而不是泛泛而谈的热闹。</p>
+</div>
+<ul class="list">
+<li>
+<span class="num">01</span>
+<div>
+<h3>对阵悬念<span class="badge">开场</span></h3>
+<p>今日大赛的开场对阵常出现意料之外的组合，这是每日大赛吃瓜最先被讨论的部分。看点在于组合方式是否改变了后续节奏。</p>
+</div>
+</li>
+<li>
+<span class="num">02</span>
+<div>
+<h3>走势反转<span class="badge">中段</span></h3>
+<p>中段的反转是吃瓜讨论的高频词。看点在反差：前半段与后半段的表现差异，往往比最终结果更容易引发讨论。</p>
+</div>
+</li>
+<li>
+<span class="num">03</span>
+<div>
+<h3>关键片段<span class="badge">细节</span></h3>
+<p>每日大赛吃瓜离不开对关键片段的回看。这里标出被反复提及的片段位置，方便你带着问题去看，而不是被动刷到。</p>
+</div>
+</li>
+<li>
+<span class="num">04</span>
+<div>
+<h3>结果确认<span class="badge">收尾</span></h3>
+<p>结果公布后，讨论会从“会不会”转向“为什么”。看点区会区分已确认的结果与仍在流传的说法，帮助保持判断的确定性。</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+
+<section id="topics">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">Topics</span>
+<h2>今日大赛热门话题</h2>
+<p>话题区把讨论按方向归类，每条都说明它为何出现在今日大赛每日大赛吃瓜的视野里，以及它和赛况的关系。</p>
+</div>
+<div class="grid g2">
+<div class="card">
+<h3><span class="dot"></span>话题一：节奏为何突变</h3>
+<p>围绕中段节奏变化的讨论最多。这类话题的价值在于把观感和赛况节点对上，避免只记住情绪而记不住过程。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>话题二：结果是否意外</h3>
+<p>结果出来后，意外与否成为每日大赛吃瓜的常见讨论。判断依据应回到开场对阵与中段走势，而不是单看结论。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>话题三：片段被反复回看</h3>
+<p>某些片段会被反复提起，说明它承载了关键信息。话题区标注这些片段的位置，方便按图索骥。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>话题四：说法与事实的边界</h3>
+<p>今日大赛的讨论中常混入未经确认的说法。本栏目只呈现可核对的部分，对不确定内容保持保留态度。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="guide">
+<div class="wrap">
+<div class="guide">
+<span class="kicker" style="font-size:12.5px;letter-spacing:2px;color:var(--cool)">Guide</span>
+<h2>每日大赛吃瓜围观指南</h2>
+<p><strong>先看赛况，再看讨论。</strong>今日大赛每日大赛吃瓜的顺序建议是：速览确认当天比了什么，看点区找到值得聊的片段，话题区理解讨论为何集中。顺序反过来，容易先被情绪带走。</p>
+<p><strong>区分确认与流传。</strong>结果有确认状态，说法有来源边界。遇到每日大赛吃瓜中流传的说法，先回速览核对结果是否已确认，再决定要不要跟进。</p>
+<p><strong>按天跟进，不追旧账。</strong>每日大赛以日为更新单位，当天的看点与话题优先于前几天的残留讨论。把注意力放在今天，围观效率更高。</p>
+<div class="pill-row">
+<span class="pill">开场对阵</span>
+<span class="pill">中段走势</span>
+<span class="pill">关键片段</span>
+<span class="pill">结果确认</span>
+<span class="pill">话题归类</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">FAQ</span>
+<h2>关于今日大赛每日大赛吃瓜的常见疑问</h2>
+</div>
+<div class="grid g2">
+<div class="card">
+<h3><span class="dot"></span>每天都能看到新内容吗？</h3>
+<p>每日大赛以日为更新单位，速览、看点与话题都按当天内容组织。今日大赛每日大赛吃瓜的重点是当天的赛况与讨论，而非历史汇总。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>没有看直播还能跟上吗？</h3>
+<p>可以。速览提供当天环节与结果，看点区标出关键片段位置，即使事后跟进也能理解讨论的来龙去脉。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>页面上的说法都可信吗？</h3>
+<p>页面区分已确认结果与仍在流传的说法，只对可核对的部分做明确表述。对不确定内容，页面保持保留，不替读者下结论。</p>
+</div>
+<div class="card">
+<h3><span class="dot"></span>下载入口现在能用吗？</h3>
+<p>下载入口暂未开放，按钮保持禁用状态，待正式地址确定后替换。当前建议直接通过页面栏目浏览每日大赛吃瓜内容。</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-brand">
+<a class="logo" href="#top">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<rect width="64" height="64" rx="14" fill="#1a1f2e"/>
+<circle cx="32" cy="30" r="15" fill="#ffb84d"/>
+<path d="M32 15a15 15 0 0 1 0 30z" fill="#ff7a45"/>
+<path d="M24 20l4 6M40 20l-4 6" stroke="#1a1f2e" stroke-width="3" stroke-linecap="round"/>
+<path d="M20 50h24" stroke="#ffb84d" stroke-width="4" stroke-linecap="round"/>
+</svg>
+<span>今日大赛每日大赛吃瓜</span>
+</a>
+<p>今日大赛每日大赛吃瓜主题首页，按日汇总赛况速览、吃瓜看点与热门话题，帮助围观者先看事实、再看讨论。</p>
+</div>
+<div class="foot-links">
+<div>
+<h4>栏目</h4>
+<ul>
+<li><a href="#overview">赛况速览</a></li>
+<li><a href="#watch">吃瓜看点</a></li>
+<li><a href="#topics">热门话题</a></li>
+</ul>
+</div>
+<div>
+<h4>帮助</h4>
+<ul>
+<li><a href="#guide">围观指南</a></li>
+<li><a href="#faq">常见疑问</a></li>
+<li><a href="#top">回到顶部</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="copy">© 今日大赛每日大赛吃瓜 · 内容按日更新，赛况与讨论以页面标注的确认状态为准。</div>
+</div>
+</footer>
+
+</body>
+</html>
