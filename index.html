@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51爆料网-51爆料网热门资讯_网友爆料_每日更新</title>
+<meta name="description" content="51爆料网聚合网友投稿的热门爆料与资讯，按分类整理最新内容，提供投稿入口与浏览路径，每日更新，帮助读者快速了解网络热议话题。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c0392b'/%3E%3Cpath d='M20 22h24v6H20zm0 10h16v6H20zm0 10h24v6H20z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#c0392b;
+  --brand-dark:#8e2318;
+  --ink:#1e2126;
+  --ink-soft:#4a5058;
+  --line:#e6e1db;
+  --bg:#faf7f3;
+  --card:#ffffff;
+  --accent:#f2e6df;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,247,243,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.18rem;letter-spacing:.02em;}
+.logo .mark{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--brand);display:grid;place-items:center;flex:0 0 auto;
+}
+.logo .mark svg{width:22px;height:22px;}
+.logo span.brandname{color:var(--brand-dark);white-space:nowrap;}
+.main-nav{display:flex;gap:22px;font-size:.94rem;color:var(--ink-soft);}
+.main-nav a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
+.main-nav a:hover{color:var(--brand);border-bottom-color:var(--brand);}
+.header-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--brand);color:#fff;font-size:.9rem;font-weight:600;
+  padding:8px 16px;border-radius:999px;white-space:nowrap;
+  transition:.2s;
+}
+.header-cta:hover{background:var(--brand-dark);}
+
+/* Hero */
+.hero{
+  padding:56px 0 44px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(192,57,43,.10), transparent 42%),
+    radial-gradient(circle at 6% 88%, rgba(192,57,43,.07), transparent 38%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;font-weight:700;letter-spacing:.12em;
+  color:var(--brand);text-transform:uppercase;margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--brand);display:block;}
+h1{
+  font-size:clamp(2rem,4.4vw,2.9rem);
+  line-height:1.22;font-weight:800;letter-spacing:.01em;
+  color:var(--ink);margin-bottom:18px;
+}
+.hero p.lead{font-size:1.02rem;color:var(--ink-soft);max-width:34em;margin-bottom:26px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+.btn-primary{
+  background:var(--brand);color:#fff;font-weight:700;font-size:.96rem;
+  padding:12px 26px;border-radius:10px;display:inline-block;transition:.2s;
+}
+.btn-primary:hover{background:var(--brand-dark);}
+.btn-ghost{
+  border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+  font-weight:600;font-size:.96rem;padding:12px 24px;border-radius:10px;
+  display:inline-block;transition:.2s;
+}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);}
+.hero-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:22px 22px 18px;box-shadow:0 12px 34px -22px rgba(30,33,38,.35);
+}
+.hero-panel h2{font-size:.86rem;letter-spacing:.1em;color:var(--brand);font-weight:700;margin-bottom:14px;}
+.ticker{list-style:none;display:grid;gap:11px;}
+.ticker li{display:flex;gap:10px;font-size:.9rem;color:var(--ink-soft);line-height:1.55;}
+.ticker li .dot{width:6px;height:6px;border-radius:50%;background:var(--brand);margin-top:.6em;flex:0 0 auto;}
+.ticker li b{color:var(--ink);font-weight:600;}
+
+/* Section base */
+section{padding:56px 0;}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;}
+.section-head h2{font-size:1.5rem;font-weight:800;letter-spacing:.01em;}
+.section-head h2 small{display:block;font-size:.82rem;font-weight:500;color:var(--ink-soft);letter-spacing:.02em;margin-top:6px;}
+.section-link{font-size:.9rem;color:var(--brand);font-weight:600;white-space:nowrap;}
+.section-link:hover{text-decoration:underline;}
+
+/* Category cards */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.cat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px;transition:.22s;
+}
+.cat-card:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:0 16px 30px -24px rgba(192,57,43,.6);}
+.cat-icon{
+  width:40px;height:40px;border-radius:10px;background:var(--accent);
+  display:grid;place-items:center;margin-bottom:14px;
+}
+.cat-icon svg{width:21px;height:21px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.cat-card h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;}
+.cat-card p{font-size:.88rem;color:var(--ink-soft);line-height:1.65;}
+
+/* Feed */
+.feed{display:grid;gap:16px;}
+.feed-item{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+  transition:.2s;
+}
+.feed-item:hover{border-color:var(--brand);}
+.feed-num{
+  font-size:1.1rem;font-weight:800;color:var(--brand);
+  background:var(--accent);width:44px;height:44px;border-radius:10px;
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.feed-body h3{font-size:1.02rem;font-weight:700;margin-bottom:6px;line-height:1.5;}
+.feed-body p{font-size:.9rem;color:var(--ink-soft);line-height:1.68;}
+.feed-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.78rem;color:#8d857b;}
+.feed-meta .tag{
+  background:var(--accent);color:var(--brand-dark);font-weight:600;
+  padding:2px 10px;border-radius:999px;
+}
+
+/* Guide / two column */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;}
+.guide-list{list-style:none;display:grid;gap:18px;margin-top:6px;}
+.guide-list li{padding-left:34px;position:relative;font-size:.94rem;color:var(--ink-soft);line-height:1.7;}
+.guide-list li b{color:var(--ink);display:block;font-size:.98rem;margin-bottom:2px;}
+.guide-list li::before{
+  content:"";position:absolute;left:0;top:4px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--accent);border:1.5px solid var(--brand);
+}
+.guide-note{
+  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);
+  border-radius:12px;padding:22px 22px 20px;
+}
+.guide-note h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;}
+.guide-note p{font-size:.9rem;color:var(--ink-soft);line-height:1.72;margin-bottom:12px;}
+.guide-note p:last-child{margin-bottom:0;}
+
+/* Search / filter */
+.toolbar{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:24px;
+}
+.toolbar label{font-size:.88rem;font-weight:600;color:var(--ink-soft);}
+.toolbar input{
+  flex:1 1 200px;min-width:0;border:1px solid var(--line);border-radius:8px;
+  padding:9px 13px;font-size:.9rem;font-family:inherit;background:var(--bg);color:var(--ink);
+}
+.toolbar input:focus{outline:2px solid var(--brand);outline-offset:1px;border-color:transparent;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{
+  border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);
+  font-size:.82rem;font-weight:600;padding:6px 14px;border-radius:999px;
+  cursor:pointer;font-family:inherit;transition:.18s;
+}
+.chip:hover{border-color:var(--brand);color:var(--brand);}
+.chip.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+.empty-tip{display:none;font-size:.9rem;color:var(--ink-soft);padding:18px 4px;}
+.empty-tip.show{display:block;}
+.feed-item.hidden{display:none;}
+
+/* Stats strip */
+.stats{
+  background:linear-gradient(135deg,#8e2318,#c0392b);
+  border-radius:18px;color:#fff;padding:34px 28px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;
+}
+.stats .num{font-size:1.7rem;font-weight:800;line-height:1.2;}
+.stats .lbl{font-size:.84rem;opacity:.88;margin-top:4px;}
+
+/* Footer */
+.site-footer{
+  background:#221f1c;color:#cfc7bd;padding:44px 0 28px;margin-top:20px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px;}
+.footer-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:#fff;margin-bottom:12px;}
+.footer-brand .mark{width:32px;height:32px;border-radius:8px;background:var(--brand);display:grid;place-items:center;}
+.footer-brand .mark svg{width:18px;height:18px;}
+.site-footer p{font-size:.86rem;line-height:1.75;color:#a9a199;}
+.footer-col h4{font-size:.88rem;color:#fff;font-weight:700;margin-bottom:12px;letter-spacing:.04em;}
+.footer-col ul{list-style:none;display:grid;gap:9px;font-size:.86rem;}
+.footer-col a:hover{color:#fff;text-decoration:underline;}
+.footer-bottom{
+  border-top:1px solid #363230;padding-top:18px;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+  font-size:.78rem;color:#8d857b;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .split{grid-template-columns:1fr;gap:28px;}
+  .cat-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .main-nav{display:none;}
+}
+@media (max-width:640px){
+  .header-inner{padding:10px 0;}
+  .header-cta{font-size:.82rem;padding:7px 13px;}
+  .logo{font-size:1.02rem;}
+  .hero{padding:38px 0 34px;}
+  h1{font-size:1.85rem;}
+  .hero p.lead{font-size:.95rem;}
+  section{padding:40px 0;}
+  .cat-grid{grid-template-columns:1fr;}
+  .feed-item{grid-template-columns:1fr;gap:10px;padding:18px;}
+  .feed-num{width:36px;height:36px;font-size:.95rem;}
+  .stats{grid-template-columns:1fr;gap:18px;padding:26px 20px;}
+  .footer-grid{grid-template-columns:1fr;gap:24px;}
+  .section-head{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="51爆料网 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 5h12v2.6H6zM6 10.2h8v2.6H6zM6 15.4h12V18H6z"/></svg>
+      </span>
+      <span class="brandname">51爆料网</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#categories">爆料分类</a>
+      <a href="#feed">最新爆料</a>
+      <a href="#guide">浏览指南</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <a class="header-cta" href="#feed">查看今日爆料</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">网友投稿 · 每日整理</span>
+        <h1>51爆料网</h1>
+        <p class="lead">51爆料网是一个面向普通读者的爆料资讯聚合页面，把网友投稿的热门话题按分类整理成可浏览的条目，标注来源方向与更新状态，方便你在短时间内了解网络热议的内容脉络。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#feed">浏览最新爆料</a>
+          <a class="btn-ghost" href="#guide">了解浏览方式</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="今日热点速览">
+        <h2>今日速览</h2>
+        <ul class="ticker">
+          <li><span class="dot"></span><span><b>生活见闻</b>：社区公共设施使用的讨论持续升温。</span></li>
+          <li><span class="dot"></span><span><b>消费提醒</b>：网友整理促销活动的常见注意点。</span></li>
+          <li><span class="dot"></span><span><b>网络话题</b>：短视频平台上的热门说法被逐条核对。</span></li>
+          <li><span class="dot"></span><span><b>投稿动态</b>：新一批读者投稿已进入分类整理流程。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>爆料分类<small>按内容方向归档，便于按需查找</small></h2>
+        <a class="section-link" href="#feed">全部条目 →</a>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12h8M8 16h5"/></svg></div>
+          <h3>生活见闻</h3>
+          <p>记录日常场景中的观察与亲历，包括社区、出行、邻里等话题，内容以投稿者自述为主，读者可自行判断信息完整度。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>消费提醒</h3>
+          <p>汇总促销、售后、价格变动等消费相关信息，强调核对渠道与保留凭证，帮助读者在购买前多一步确认。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+          <h3>网络话题</h3>
+          <p>梳理社交平台上的热门说法，区分原始表述与二次传播，标注时间与出处方向，避免把讨论当作结论。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+          <h3>投稿须知</h3>
+          <p>说明投稿的基本要求：时间、地点、经过尽量写清，避免涉及他人隐私，图片与文字需为本人可提供的内容。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h9l4 4v12H6z"/><path d="M9 11h7M9 15h5"/></svg></div>
+          <h3>核实与更正</h3>
+          <p>对有明显出入的条目添加更正说明，保留原投稿时间线，读者可在条目下方看到后续调整记录。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M9 9h6v6H9z"/></svg></div>
+          <h3>专题整理</h3>
+          <p>把同一话题下的多条爆料集中排列，按时间顺序呈现，适合想了解前后经过的读者连续阅读。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feed with filter -->
+  <section id="feed">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>最新爆料<small>条目按整理顺序排列，可输入关键词筛选</small></h2>
+        <a class="section-link" href="#guide">如何投稿 →</a>
+      </div>
+
+      <div class="toolbar">
+        <label for="feedSearch">筛选条目</label>
+        <input id="feedSearch" type="search" placeholder="输入关键词，如“消费”“社区”“短视频”" autocomplete="off">
+        <div class="chips" role="group" aria-label="分类筛选">
+          <button class="chip active" type="button" data-cat="all">全部</button>
+          <button class="chip" type="button" data-cat="生活见闻">生活见闻</button>
+          <button class="chip" type="button" data-cat="消费提醒">消费提醒</button>
+          <button class="chip" type="button" data-cat="网络话题">网络话题</button>
+        </div>
+      </div>
+
+      <div class="feed" id="feedList">
+        <article class="feed-item" data-cat="生活见闻">
+          <div class="feed-num">01</div>
+          <div class="feed-body">
+            <h3>社区公共充电位使用争议，居民提出分时建议</h3>
+            <p>多位投稿者描述同一小区充电位在晚间被长期占用的情况。条目整理了双方说法：一方认为应按先到先得，另一方建议分时段预约。目前尚无统一处理结果，相关内容仅供了解讨论过程。</p>
+            <div class="feed-meta"><span class="tag">生活见闻</span><span>整理时间：本周</span><span>状态：持续跟进</span></div>
+          </div>
+        </article>
+        <article class="feed-item" data-cat="消费提醒">
+          <div class="feed-num">02</div>
+          <div class="feed-body">
+            <h3>促销活动规则被指不易理解，读者整理核对清单</h3>
+            <p>有读者投稿称某类满减活动的叠加条件写在页面底部。51爆料网将该投稿整理为一份核对清单，包括活动期限、适用范围与退款规则，提醒下单前截图留存页面说明。</p>
+            <div class="feed-meta"><span class="tag">消费提醒</span><span>整理时间：本周</span><span>状态：已补充说明</span></div>
+          </div>
+        </article>
+        <article class="feed-item" data-cat="网络话题">
+          <div class="feed-num">03</div>
+          <div class="feed-body">
+            <h3>短视频热门说法被逐条核对，部分表述缺少出处</h3>
+            <p>针对一条在短视频平台广泛转发的说法，投稿者列出原始表述与后续转述的差异。条目仅记录核对过程，不判定真伪，建议读者遇到类似内容时先查找最初发布者与发布时间。</p>
+            <div class="feed-meta"><span class="tag">网络话题</span><span>整理时间：近期</span><span>状态：待补充来源</span></div>
+          </div>
+        </article>
+        <article class="feed-item" data-cat="生活见闻">
+          <div class="feed-num">04</div>
+          <div class="feed-body">
+            <h3>公交线路调整后的换乘体验，读者记录早晚高峰</h3>
+            <p>投稿者连续几天记录同一线路调整后的候车时间，并附上换乘点的步行距离。内容属于个人观察，样本有限，条目中已注明记录日期与时段，方便读者对照自身情况。</p>
+            <div class="feed-meta"><span class="tag">生活见闻</span><span>整理时间：近期</span><span>状态：已归档</span></div>
+          </div>
+        </article>
+        <article class="feed-item" data-cat="消费提醒">
+          <div class="feed-num">05</div>
+          <div class="feed-body">
+            <h3>二手交易沟通记录引关注，读者总结注意事项</h3>
+            <p>围绕二手平台的沟通与验货环节，多位投稿者分享了各自的经历。条目归纳出保留聊天记录、当面验货、避免脱离平台交易等要点，均为投稿者经验，不构成交易建议。</p>
+            <div class="feed-meta"><span class="tag">消费提醒</span><span>整理时间：较早</span><span>状态：已归档</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-tip" id="emptyTip">没有匹配的条目，试试其他关键词或切换分类。</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section aria-label="内容概况">
+    <div class="wrap">
+      <div class="stats">
+        <div><div class="num">6</div><div class="lbl">内容分类</div></div>
+        <div><div class="num">每日</div><div class="lbl">投稿整理频率</div></div>
+        <div><div class="num">3 步</div><div class="lbl">投稿与核实流程</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide -->
+  <section id="guide">
+    <div class="wrap split">
+      <div>
+        <div class="section-head" style="margin-bottom:20px;">
+          <h2>浏览与投稿指南<small>先看流程，再决定是否投稿</small></h2>
+        </div>
+        <ul class="guide-list">
+          <li><b>第一步：确认内容方向</b>先在上方分类中定位话题，阅读同类的已有条目，判断自己的信息是否补充了新细节。</li>
+          <li><b>第二步：写清时间地点经过</b>投稿时尽量注明发生时间、地点范围与事件经过，涉及他人时请模糊姓名与联系方式。</li>
+          <li><b>第三步：等待整理与反馈</b>51爆料网会对来稿进行归类与文字整理，遇到信息缺口会标注“待补充”，不会替投稿者下结论。</li>
+        </ul>
+      </div>
+      <aside class="guide-note" id="about">
+        <h3>关于 51爆料网</h3>
+        <p>51爆料网定位为爆料资讯的整理页面，内容来自读者投稿与公开讨论的归纳。我们更关注信息来源是否清楚、表述是否完整，而不是追求话题热度。</p>
+        <p>对于无法核实的说法，页面会保留原始表述并注明状态；对于出现明显错误的条目，会追加更正说明。读者在引用条目内容时，请以页面标注的时间与状态为准。</p>
+        <p>如果你希望保存当前页面的分类与筛选说明，可先下载整理版说明文档，正式地址稍后公布。</p>
+        <a class="btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;margin-top:6px;">下载整理版说明</a>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#fff"><path d="M6 5h12v2.6H6zM6 10.2h8v2.6H6zM6 15.4h12V18H6z"/></svg>
+          </span>
+          51爆料网
+        </div>
+        <p>51爆料网把网友投稿整理成可浏览的条目，标注分类、时间与状态，帮助读者了解网络热议话题的来龙去脉。内容以投稿者自述为主，请结合多方信息自行判断。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#categories">爆料分类</a></li>
+          <li><a href="#feed">最新爆料</a></li>
+          <li><a href="#guide">浏览与投稿指南</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>投稿相关</h4>
+        <ul>
+          <li><a href="#guide">投稿基本要求</a></li>
+          <li><a href="#about">核实与更正说明</a></li>
+          <li><a href="#feed">专题整理条目</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 51爆料网 · 爆料资讯整理页面</span>
+      <span>内容来自读者投稿，仅供信息参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('feedSearch');
+  var items = Array.prototype.slice.call(document.querySelectorAll('#feedList .feed-item'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var emptyTip = document.getElementById('emptyTip');
+  var activeCat = 'all';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(item){
+      var cat = item.getAttribute('data-cat') || '';
+      var text = item.textContent.toLowerCase();
+      var okCat = (activeCat === 'all') || (cat === activeCat);
+      var okText = !q || text.indexOf(q) !== -1;
+      if(okCat && okText){
+        item.classList.remove('hidden');
+        shown++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    emptyTip.classList.toggle('show', shown === 0);
+  }
+
+  input.addEventListener('input', apply);
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      activeCat = chip.getAttribute('data-cat') || 'all';
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
+
+</body>
+</html>
